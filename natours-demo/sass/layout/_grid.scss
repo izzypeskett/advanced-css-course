@@ -1,0 +1,20 @@
+.row {
+  max-width: $grid-width; // If the width is smaller than 114rem it will just fill 100% of the space
+  background-color: #eee;
+  margin: 0 auto;
+  
+  &:not(:last-child) {
+    // selecting everything but the :last-child
+    margin-bottom: $gutter-vertical;
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    background-color: orangered;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
